@@ -8888,7 +8888,7 @@
                             <div style="font-weight: bold; font-size: 1.05rem; color: #0f172a; margin-bottom: 0.4rem;">測試集批量推理挑戰</div>
                             
                             <!-- Grid slots -->
-                            <div id="ivg-slots" style="display: grid; grid-template-columns: repeat(4, 64px); gap: 6px; justify-content: center; width: 100%; margin-bottom: 0.5rem;">
+                            <div id="ivg-slots" style="display: grid; grid-template-columns: repeat(4, 110px); gap: 6px; justify-content: center; width: 100%; margin-bottom: 0.5rem;">
                                 <!-- JS will populate -->
                             </div>
                             
@@ -15285,16 +15285,16 @@
             
             // 4 static slots
             slots.innerHTML = `
-                <div class="ivg-slot" style="width:64px; height:64px; border:1.5px solid #cbd5e1; border-radius:6px; background:#f8fafc; font-size:12px; font-weight:bold; display:flex; flex-direction:column; justify-content:center; align-items:center; box-sizing:border-box;">
+                <div class="ivg-slot" style="width:110px; height:110px; border:2px solid #cbd5e1; border-radius:10px; background:#f8fafc; font-size:18px; font-weight:bold; display:flex; flex-direction:column; justify-content:center; align-items:center; box-sizing:border-box;">
                     <span>Plane</span>
                 </div>
-                <div class="ivg-slot" style="width:64px; height:64px; border:1.5px solid #cbd5e1; border-radius:6px; background:#f8fafc; font-size:12px; font-weight:bold; display:flex; flex-direction:column; justify-content:center; align-items:center; box-sizing:border-box;">
+                <div class="ivg-slot" style="width:110px; height:110px; border:2px solid #cbd5e1; border-radius:10px; background:#f8fafc; font-size:18px; font-weight:bold; display:flex; flex-direction:column; justify-content:center; align-items:center; box-sizing:border-box;">
                     <span>Car</span>
                 </div>
-                <div class="ivg-slot" style="width:64px; height:64px; border:1.5px solid #cbd5e1; border-radius:6px; background:#f8fafc; font-size:12px; font-weight:bold; display:flex; flex-direction:column; justify-content:center; align-items:center; box-sizing:border-box;">
+                <div class="ivg-slot" style="width:110px; height:110px; border:2px solid #cbd5e1; border-radius:10px; background:#f8fafc; font-size:18px; font-weight:bold; display:flex; flex-direction:column; justify-content:center; align-items:center; box-sizing:border-box;">
                     <span>Cat</span>
                 </div>
-                <div class="ivg-slot" style="width:64px; height:64px; border:1.5px solid #cbd5e1; border-radius:6px; background:#f8fafc; font-size:12px; font-weight:bold; display:flex; flex-direction:column; justify-content:center; align-items:center; box-sizing:border-box;">
+                <div class="ivg-slot" style="width:110px; height:110px; border:2px solid #cbd5e1; border-radius:10px; background:#f8fafc; font-size:18px; font-weight:bold; display:flex; flex-direction:column; justify-content:center; align-items:center; box-sizing:border-box;">
                     <span>Dog</span>
                 </div>
             `;
@@ -15324,8 +15324,8 @@
                 slots[idx].style.border = `1.5px solid ${r.border}`;
                 slots[idx].style.color = r.color;
                 slots[idx].innerHTML = `
-                    <span style="font-size:9px; color:#64748b;">Label:${r.text}</span>
-                    <span style="font-size:11px; font-weight:bold;">Pred:${r.pred}</span>
+                    <span style="font-size:14px; color:#64748b;">Label:${r.text}</span>
+                    <span style="font-size:17px; font-weight:bold;">Pred:${r.pred}</span>
                 `;
                 
                 idx++;
