@@ -11284,13 +11284,13 @@
                     `;
                     break;
 
-                case "finetune-concept":
+                                case "finetune-concept":
                     area.innerHTML = `
                         <div style="display: flex; flex-direction: column; align-items: center; width: 100%; font-family: var(--font-sans); box-sizing: border-box; justify-content: center; padding: 0.5rem;">
                             <div style="font-size: 1.05rem; font-weight: bold; color: var(--primary); margin-bottom: 0.5rem; text-align: center;">大模型修煉之路：預訓練與微調</div>
                             
                             <div style="background: #ffffff; border: 1.5px solid var(--border-color); border-radius: 12px; padding: 1rem; width: 100%; box-sizing: border-box; display: flex; justify-content: center; position: relative;">
-                                <svg width="320" height="150" viewBox="0 0 320 150">
+                                <svg width="440" height="180" viewBox="0 0 440 180" style="overflow:visible; height:180px !important; width:auto !important; max-width:100% !important;">
                                     <defs>
                                         <marker id="arrowHeadPre" markerWidth="10" markerHeight="7" refX="8" refY="3.5" orient="auto">
                                             <polygon points="0 0, 10 3.5, 0 7" fill="#3b82f6" />
@@ -11301,45 +11301,42 @@
                                     </defs>
                                     
                                     <!-- 1. Pretraining (Left) -->
-                                    <rect x="20" y="20" width="80" height="45" rx="4" fill="#eff6ff" stroke="#3b82f6" stroke-width="2" />
-                                    <text x="60" y="40" font-size="11" font-weight="bold" fill="#1e293b" text-anchor="middle">海量無標籤文本</text>
-                                    <text x="60" y="55" font-size="9" fill="#64748b" text-anchor="middle">維基百科、新聞</text>
+                                    <rect x="15" y="20" width="115" height="50" rx="6" fill="#eff6ff" stroke="#3b82f6" stroke-width="2" />
+                                    <text x="72" y="42" font-size="12" font-weight="bold" fill="#1e293b" text-anchor="middle">海量無標籤文本</text>
+                                    <text x="72" y="58" font-size="9.5" fill="#64748b" text-anchor="middle">維基百科、新聞</text>
                                     
-                                    <!-- Pretraining flow arrow -->
-                                    <path d="M 60 65 L 60 90 L 120 90" fill="none" stroke="#3b82f6" stroke-width="3" stroke-dasharray="8" marker-end="url(#arrowHeadPre)">
-                                        <animate attributeName="stroke-dashoffset" values="16;0" dur="0.8s" repeatCount="indefinite" />
+                                    <!-- Pretraining flow arrow (L-shaped underneath) -->
+                                    <path d="M 72 70 L 72 135 L 170 135" fill="none" stroke="#3b82f6" stroke-width="3" stroke-dasharray="6" marker-end="url(#arrowHeadPre)">
+                                        <animate attributeName="stroke-dashoffset" values="12;0" dur="0.8s" repeatCount="indefinite" />
                                     </path>
-                                    
-                                    <text x="75" y="85" font-size="10" font-weight="bold" fill="#3b82f6">預訓練 (Pre-train)</text>
+                                    <text x="72" y="112" font-size="10.5" font-weight="bold" fill="#3b82f6" text-anchor="middle">預訓練 (Pre-train)</text>
 
                                     <!-- Center: BERT Model -->
-                                    <g transform="translate(130, 50)">
+                                    <g transform="translate(180, 50)">
                                         <!-- Model Body -->
-                                        <rect x="0" y="15" width="60" height="60" rx="8" fill="#f8fafc" stroke="#1e293b" stroke-width="2">
+                                        <rect x="0" y="20" width="80" height="70" rx="8" fill="#f8fafc" stroke="#1e293b" stroke-width="2">
                                             <animate attributeName="fill" values="#f8fafc;#dbeafe;#f8fafc" dur="4s" repeatCount="indefinite" />
                                         </rect>
-                                        <text x="30" y="45" font-size="14" font-weight="extrabold" fill="#1e293b" text-anchor="middle">BERT</text>
-                                        <text x="30" y="60" font-size="9" fill="#64748b" text-anchor="middle">通用語意大腦</text>
+                                        <text x="40" y="55" font-size="15" font-weight="extrabold" fill="#1e293b" text-anchor="middle">BERT</text>
+                                        <text x="40" y="72" font-size="9.5" fill="#64748b" text-anchor="middle">通用語意大腦</text>
                                         
                                         <!-- Classifier Head (Fine-tuning part) -->
-                                        <rect x="10" y="-5" width="40" height="20" rx="4" fill="#ffffff" stroke="#10b981" stroke-width="2">
+                                        <rect x="15" y="-5" width="50" height="25" rx="4" fill="#ffffff" stroke="#10b981" stroke-width="2">
                                             <animate attributeName="fill" values="#ffffff;#d1fae5;#ffffff" dur="4s" begin="2s" repeatCount="indefinite" />
                                         </rect>
-                                        <text x="30" y="8" font-size="9" font-weight="bold" fill="#10b981" text-anchor="middle">分類任務頭</text>
+                                        <text x="40" y="11" font-size="9.5" font-weight="bold" fill="#10b981" text-anchor="middle">分類任務頭</text>
                                     </g>
 
                                     <!-- 2. Fine-tuning (Right) -->
-                                    <rect x="220" y="20" width="80" height="45" rx="4" fill="#ecfdf5" stroke="#10b981" stroke-width="2" />
-                                    <text x="260" y="40" font-size="11" font-weight="bold" fill="#1e293b" text-anchor="middle">少量標籤數據</text>
-                                    <text x="260" y="55" font-size="9" fill="#64748b" text-anchor="middle">100筆情緒分類</text>
+                                    <rect x="310" y="20" width="115" height="50" rx="6" fill="#ecfdf5" stroke="#10b981" stroke-width="2" />
+                                    <text x="367" y="42" font-size="12" font-weight="bold" fill="#1e293b" text-anchor="middle">少量標籤數據</text>
+                                    <text x="367" y="58" font-size="9.5" fill="#64748b" text-anchor="middle">100筆情緒分類</text>
                                     
-                                    <!-- Fine-tuning flow arrow -->
-                                    <path d="M 260 65 L 260 55 L 180 55" fill="none" stroke="#10b981" stroke-width="3" stroke-dasharray="8" marker-end="url(#arrowHeadFine)">
-                                        <animate attributeName="stroke-dashoffset" values="16;0" dur="0.8s" repeatCount="indefinite" />
+                                    <!-- Fine-tuning flow arrow (Direct straight line) -->
+                                    <path d="M 310 45 L 250 45" fill="none" stroke="#10b981" stroke-width="3" stroke-dasharray="6" marker-end="url(#arrowHeadFine)">
+                                        <animate attributeName="stroke-dashoffset" values="12;0" dur="0.8s" repeatCount="indefinite" />
                                     </path>
-                                    
-                                    <text x="210" y="80" font-size="10" font-weight="bold" fill="#10b981">微調 (Fine-tune)</text>
-                                    
+                                    <text x="280" y="36" font-size="10.5" font-weight="bold" fill="#10b981" text-anchor="middle">微調 (Fine-tune)</text>
                                 </svg>
                             </div>
                             
