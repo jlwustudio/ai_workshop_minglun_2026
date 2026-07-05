@@ -7692,7 +7692,7 @@
                             <!-- LSTM Track -->
                             <div style="width: 100%; text-align: left; font-size: 0.72rem; margin-bottom: 0.4rem;">
                                 <div style="font-weight: bold; color: var(--danger); margin-bottom: 2px;">LSTM 計算進度 (Step-by-step):</div>
-                                <div style="background: #f1f5f9; height: 10px; border-radius: 5px; overflow: hidden; position: relative;">
+                                <div style="background: #f1f5f9; height: 20px; border-radius: 5px; overflow: hidden; position: relative;">
                                     <div id="lpbi-bar-lstm" style="height: 100%; width: 0%; background: var(--danger); transition: width 2.4s linear; border-radius: 5px;"></div>
                                 </div>
                             </div>
@@ -7700,12 +7700,12 @@
                             <!-- Transformer Track -->
                             <div style="width: 100%; text-align: left; font-size: 0.72rem; margin-bottom: 0.6rem;">
                                 <div style="font-weight: bold; color: var(--success); margin-bottom: 2px;">Transformer 計算進度 (Parallel):</div>
-                                <div style="background: #f1f5f9; height: 10px; border-radius: 5px; overflow: hidden; position: relative;">
+                                <div style="background: #f1f5f9; height: 20px; border-radius: 5px; overflow: hidden; position: relative;">
                                     <div id="lpbi-bar-tf" style="height: 100%; width: 0%; background: var(--success); transition: width 0.6s cubic-bezier(0.16, 1, 0.3, 1); border-radius: 5px;"></div>
                                 </div>
                             </div>
                             
-                            <button class="btn btn-sm" id="lpbi-btn" onclick="runLstmParallelBottleneck()" style="padding: 0.25rem 0.8rem; font-size: 0.75rem; font-weight: bold; cursor: pointer; border-radius: 4px; border: none; background: var(--secondary); color: white; width: 100%;">執行計算速度對決</button>
+                            <button class="btn btn-sm" id="lpbi-btn" onclick="runLstmParallelBottleneck()" style="padding: 0.4rem 1.2rem; font-size: 0.95rem; font-weight: bold; cursor: pointer; border-radius: 4px; border: none; background: var(--secondary); color: white; width: 100%;">執行計算速度對決</button>
                             
                             <div id="lpbi-desc" style="font-size: 0.72rem; color: var(--text-muted); font-weight: bold; margin-top: 0.5rem; min-height: 28px; text-align: center; line-height: 1.3;">
                                 點選按鈕，直觀體會 LSTM 序列隊伍與 Transformer 平行大軍的算力對決！
@@ -7817,41 +7817,41 @@
                             <div style="font-size: 0.72rem; color: var(--text-muted); font-weight: bold; margin-bottom: 0.5rem;">滑鼠懸停在熱力圖格子上，查看注意力分數！</div>
                             
                             <!-- 5x5 Grid representing full attention matrix -->
-                            <div style="display: grid; grid-template-columns: 35px repeat(4, 32px); gap: 2.5px; margin-bottom: 0.5rem; justify-content: center; width: 100%; align-items: center;">
+                            <div style="display: grid; grid-template-columns: 55px repeat(4, 50px); gap: 5px; margin-bottom: 0.8rem; justify-content: center; width: 100%; align-items: center;">
                                 <!-- Row 1: Columns Headers -->
-                                <div style="font-size: 8px; font-weight: bold; color: var(--text-muted); text-align: center;">Query</div>
-                                <div style="font-size: 8px; font-weight: bold; color: var(--primary); text-align: center; border-bottom: 1.5px solid var(--primary); padding-bottom:1px;">我</div>
-                                <div style="font-size: 8px; font-weight: bold; color: var(--primary); text-align: center; border-bottom: 1.5px solid var(--primary); padding-bottom:1px;">喜歡</div>
-                                <div style="font-size: 8px; font-weight: bold; color: var(--primary); text-align: center; border-bottom: 1.5px solid var(--primary); padding-bottom:1px;">電影</div>
-                                <div style="font-size: 8px; font-weight: bold; color: var(--primary); text-align: center; border-bottom: 1.5px solid var(--primary); padding-bottom:1px;">EOS</div>
+                                <div style="font-size: 13px; font-weight: bold; color: var(--text-muted); text-align: center;">Query</div>
+                                <div style="font-size: 13px; font-weight: bold; color: var(--primary); text-align: center; border-bottom: 1.5px solid var(--primary); padding-bottom:2px;">我</div>
+                                <div style="font-size: 13px; font-weight: bold; color: var(--primary); text-align: center; border-bottom: 1.5px solid var(--primary); padding-bottom:2px;">喜歡</div>
+                                <div style="font-size: 13px; font-weight: bold; color: var(--primary); text-align: center; border-bottom: 1.5px solid var(--primary); padding-bottom:2px;">電影</div>
+                                <div style="font-size: 13px; font-weight: bold; color: var(--primary); text-align: center; border-bottom: 1.5px solid var(--primary); padding-bottom:2px;">EOS</div>
 
                                 <!-- Row 2: Query "我" -->
-                                <div style="font-size: 8px; font-weight: bold; color: var(--primary); text-align: right; padding-right: 4px; border-right: 1.5px solid var(--primary);">我</div>
-                                <div style="font-size: 8px; font-weight: bold; height: 26px; display: flex; justify-content: center; align-items: center; border: 1px solid #cbd5e1; background: rgba(16, 69, 145, 0.70); color: white; cursor: pointer; border-radius: 3px;" onmouseover="hoverHeatmap(0,0)" onmouseout="clearHeatmap()">0.70</div>
-                                <div style="font-size: 8px; font-weight: bold; height: 26px; display: flex; justify-content: center; align-items: center; border: 1px solid #cbd5e1; background: rgba(16, 69, 145, 0.20); color: #334155; cursor: pointer; border-radius: 3px;" onmouseover="hoverHeatmap(0,1)" onmouseout="clearHeatmap()">0.20</div>
-                                <div style="font-size: 8px; font-weight: bold; height: 26px; display: flex; justify-content: center; align-items: center; border: 1px solid #cbd5e1; background: rgba(16, 69, 145, 0.08); color: #334155; cursor: pointer; border-radius: 3px;" onmouseover="hoverHeatmap(0,2)" onmouseout="clearHeatmap()">0.08</div>
-                                <div style="font-size: 8px; font-weight: bold; height: 26px; display: flex; justify-content: center; align-items: center; border: 1px solid #cbd5e1; background: rgba(16, 69, 145, 0.02); color: #64748b; cursor: pointer; border-radius: 3px;" onmouseover="hoverHeatmap(0,3)" onmouseout="clearHeatmap()">0.02</div>
+                                <div style="font-size: 13px; font-weight: bold; color: var(--primary); text-align: right; padding-right: 6px; border-right: 1.5px solid var(--primary);">我</div>
+                                <div style="font-size: 13px; font-weight: bold; height: 44px; display: flex; justify-content: center; align-items: center; border: 1px solid #cbd5e1; background: rgba(16, 69, 145, 0.70); color: white; cursor: pointer; border-radius: 3px;" onmouseover="hoverHeatmap(0,0)" onmouseout="clearHeatmap()">0.70</div>
+                                <div style="font-size: 13px; font-weight: bold; height: 44px; display: flex; justify-content: center; align-items: center; border: 1px solid #cbd5e1; background: rgba(16, 69, 145, 0.20); color: #334155; cursor: pointer; border-radius: 3px;" onmouseover="hoverHeatmap(0,1)" onmouseout="clearHeatmap()">0.20</div>
+                                <div style="font-size: 13px; font-weight: bold; height: 44px; display: flex; justify-content: center; align-items: center; border: 1px solid #cbd5e1; background: rgba(16, 69, 145, 0.08); color: #334155; cursor: pointer; border-radius: 3px;" onmouseover="hoverHeatmap(0,2)" onmouseout="clearHeatmap()">0.08</div>
+                                <div style="font-size: 13px; font-weight: bold; height: 44px; display: flex; justify-content: center; align-items: center; border: 1px solid #cbd5e1; background: rgba(16, 69, 145, 0.02); color: #64748b; cursor: pointer; border-radius: 3px;" onmouseover="hoverHeatmap(0,3)" onmouseout="clearHeatmap()">0.02</div>
 
                                 <!-- Row 3: Query "喜歡" -->
-                                <div style="font-size: 8px; font-weight: bold; color: var(--primary); text-align: right; padding-right: 4px; border-right: 1.5px solid var(--primary);">喜歡</div>
-                                <div style="font-size: 8px; font-weight: bold; height: 26px; display: flex; justify-content: center; align-items: center; border: 1px solid #cbd5e1; background: rgba(16, 69, 145, 0.15); color: #334155; cursor: pointer; border-radius: 3px;" onmouseover="hoverHeatmap(1,0)" onmouseout="clearHeatmap()">0.15</div>
-                                <div style="font-size: 8px; font-weight: bold; height: 26px; display: flex; justify-content: center; align-items: center; border: 1px solid #cbd5e1; background: rgba(16, 69, 145, 0.60); color: white; cursor: pointer; border-radius: 3px;" onmouseover="hoverHeatmap(1,1)" onmouseout="clearHeatmap()">0.60</div>
-                                <div style="font-size: 8px; font-weight: bold; height: 26px; display: flex; justify-content: center; align-items: center; border: 1px solid #cbd5e1; background: rgba(16, 69, 145, 0.85); color: white; cursor: pointer; border-radius: 3px;" onmouseover="hoverHeatmap(1,2)" onmouseout="clearHeatmap()">0.85</div>
-                                <div style="font-size: 8px; font-weight: bold; height: 26px; display: flex; justify-content: center; align-items: center; border: 1px solid #cbd5e1; background: rgba(16, 69, 145, 0.05); color: #64748b; cursor: pointer; border-radius: 3px;" onmouseover="hoverHeatmap(1,3)" onmouseout="clearHeatmap()">0.05</div>
+                                <div style="font-size: 13px; font-weight: bold; color: var(--primary); text-align: right; padding-right: 6px; border-right: 1.5px solid var(--primary);">喜歡</div>
+                                <div style="font-size: 13px; font-weight: bold; height: 44px; display: flex; justify-content: center; align-items: center; border: 1px solid #cbd5e1; background: rgba(16, 69, 145, 0.15); color: #334155; cursor: pointer; border-radius: 3px;" onmouseover="hoverHeatmap(1,0)" onmouseout="clearHeatmap()">0.15</div>
+                                <div style="font-size: 13px; font-weight: bold; height: 44px; display: flex; justify-content: center; align-items: center; border: 1px solid #cbd5e1; background: rgba(16, 69, 145, 0.60); color: white; cursor: pointer; border-radius: 3px;" onmouseover="hoverHeatmap(1,1)" onmouseout="clearHeatmap()">0.60</div>
+                                <div style="font-size: 13px; font-weight: bold; height: 44px; display: flex; justify-content: center; align-items: center; border: 1px solid #cbd5e1; background: rgba(16, 69, 145, 0.85); color: white; cursor: pointer; border-radius: 3px;" onmouseover="hoverHeatmap(1,2)" onmouseout="clearHeatmap()">0.85</div>
+                                <div style="font-size: 13px; font-weight: bold; height: 44px; display: flex; justify-content: center; align-items: center; border: 1px solid #cbd5e1; background: rgba(16, 69, 145, 0.05); color: #64748b; cursor: pointer; border-radius: 3px;" onmouseover="hoverHeatmap(1,3)" onmouseout="clearHeatmap()">0.05</div>
 
                                 <!-- Row 4: Query "電影" -->
-                                <div style="font-size: 8px; font-weight: bold; color: var(--primary); text-align: right; padding-right: 4px; border-right: 1.5px solid var(--primary);">電影</div>
-                                <div style="font-size: 8px; font-weight: bold; height: 26px; display: flex; justify-content: center; align-items: center; border: 1px solid #cbd5e1; background: rgba(16, 69, 145, 0.10); color: #334155; cursor: pointer; border-radius: 3px;" onmouseover="hoverHeatmap(2,0)" onmouseout="clearHeatmap()">0.10</div>
-                                <div style="font-size: 8px; font-weight: bold; height: 26px; display: flex; justify-content: center; align-items: center; border: 1px solid #cbd5e1; background: rgba(16, 69, 145, 0.35); color: #334155; cursor: pointer; border-radius: 3px;" onmouseover="hoverHeatmap(2,1)" onmouseout="clearHeatmap()">0.35</div>
-                                <div style="font-size: 8px; font-weight: bold; height: 26px; display: flex; justify-content: center; align-items: center; border: 1px solid #cbd5e1; background: rgba(16, 69, 145, 0.90); color: white; cursor: pointer; border-radius: 3px;" onmouseover="hoverHeatmap(2,2)" onmouseout="clearHeatmap()">0.90</div>
-                                <div style="font-size: 8px; font-weight: bold; height: 26px; display: flex; justify-content: center; align-items: center; border: 1px solid #cbd5e1; background: rgba(16, 69, 145, 0.10); color: #334155; cursor: pointer; border-radius: 3px;" onmouseover="hoverHeatmap(2,3)" onmouseout="clearHeatmap()">0.10</div>
+                                <div style="font-size: 13px; font-weight: bold; color: var(--primary); text-align: right; padding-right: 6px; border-right: 1.5px solid var(--primary);">電影</div>
+                                <div style="font-size: 13px; font-weight: bold; height: 44px; display: flex; justify-content: center; align-items: center; border: 1px solid #cbd5e1; background: rgba(16, 69, 145, 0.10); color: #334155; cursor: pointer; border-radius: 3px;" onmouseover="hoverHeatmap(2,0)" onmouseout="clearHeatmap()">0.10</div>
+                                <div style="font-size: 13px; font-weight: bold; height: 44px; display: flex; justify-content: center; align-items: center; border: 1px solid #cbd5e1; background: rgba(16, 69, 145, 0.35); color: #334155; cursor: pointer; border-radius: 3px;" onmouseover="hoverHeatmap(2,1)" onmouseout="clearHeatmap()">0.35</div>
+                                <div style="font-size: 13px; font-weight: bold; height: 44px; display: flex; justify-content: center; align-items: center; border: 1px solid #cbd5e1; background: rgba(16, 69, 145, 0.90); color: white; cursor: pointer; border-radius: 3px;" onmouseover="hoverHeatmap(2,2)" onmouseout="clearHeatmap()">0.90</div>
+                                <div style="font-size: 13px; font-weight: bold; height: 44px; display: flex; justify-content: center; align-items: center; border: 1px solid #cbd5e1; background: rgba(16, 69, 145, 0.10); color: #334155; cursor: pointer; border-radius: 3px;" onmouseover="hoverHeatmap(2,3)" onmouseout="clearHeatmap()">0.10</div>
 
                                 <!-- Row 5: Query "EOS" -->
-                                <div style="font-size: 8px; font-weight: bold; color: var(--primary); text-align: right; padding-right: 4px; border-right: 1.5px solid var(--primary);">EOS</div>
-                                <div style="font-size: 8px; font-weight: bold; height: 26px; display: flex; justify-content: center; align-items: center; border: 1px solid #cbd5e1; background: rgba(16, 69, 145, 0.05); color: #64748b; cursor: pointer; border-radius: 3px;" onmouseover="hoverHeatmap(3,0)" onmouseout="clearHeatmap()">0.05</div>
-                                <div style="font-size: 8px; font-weight: bold; height: 26px; display: flex; justify-content: center; align-items: center; border: 1px solid #cbd5e1; background: rgba(16, 69, 145, 0.05); color: #64748b; cursor: pointer; border-radius: 3px;" onmouseover="hoverHeatmap(3,1)" onmouseout="clearHeatmap()">0.05</div>
-                                <div style="font-size: 8px; font-weight: bold; height: 26px; display: flex; justify-content: center; align-items: center; border: 1px solid #cbd5e1; background: rgba(16, 69, 145, 0.10); color: #334155; cursor: pointer; border-radius: 3px;" onmouseover="hoverHeatmap(3,2)" onmouseout="clearHeatmap()">0.10</div>
-                                <div style="font-size: 8px; font-weight: bold; height: 26px; display: flex; justify-content: center; align-items: center; border: 1px solid #cbd5e1; background: rgba(16, 69, 145, 0.95); color: white; cursor: pointer; border-radius: 3px;" onmouseover="hoverHeatmap(3,3)" onmouseout="clearHeatmap()">0.95</div>
+                                <div style="font-size: 13px; font-weight: bold; color: var(--primary); text-align: right; padding-right: 6px; border-right: 1.5px solid var(--primary);">EOS</div>
+                                <div style="font-size: 13px; font-weight: bold; height: 44px; display: flex; justify-content: center; align-items: center; border: 1px solid #cbd5e1; background: rgba(16, 69, 145, 0.05); color: #64748b; cursor: pointer; border-radius: 3px;" onmouseover="hoverHeatmap(3,0)" onmouseout="clearHeatmap()">0.05</div>
+                                <div style="font-size: 13px; font-weight: bold; height: 44px; display: flex; justify-content: center; align-items: center; border: 1px solid #cbd5e1; background: rgba(16, 69, 145, 0.05); color: #64748b; cursor: pointer; border-radius: 3px;" onmouseover="hoverHeatmap(3,1)" onmouseout="clearHeatmap()">0.05</div>
+                                <div style="font-size: 13px; font-weight: bold; height: 44px; display: flex; justify-content: center; align-items: center; border: 1px solid #cbd5e1; background: rgba(16, 69, 145, 0.10); color: #334155; cursor: pointer; border-radius: 3px;" onmouseover="hoverHeatmap(3,2)" onmouseout="clearHeatmap()">0.10</div>
+                                <div style="font-size: 13px; font-weight: bold; height: 44px; display: flex; justify-content: center; align-items: center; border: 1px solid #cbd5e1; background: rgba(16, 69, 145, 0.95); color: white; cursor: pointer; border-radius: 3px;" onmouseover="hoverHeatmap(3,3)" onmouseout="clearHeatmap()">0.95</div>
                             </div>
                             
                             <div id="amh-desc" style="font-size: 0.72rem; color: var(--text-muted); font-weight: bold; min-height: 28px; text-align: center; line-height: 1.35; width:100%;">
@@ -7911,7 +7911,7 @@
                             <div style="font-size: 0.72rem; color: var(--text-muted); font-weight: bold; margin-bottom: 0.5rem;">點擊程式碼，解剖大模型呼叫 API！</div>
                             
                             <!-- Interactive Code Blocks -->
-                            <div style="width: 100%; border: 1px solid var(--border-color); border-radius: 6px; background: #f8fafc; padding: 6px; box-sizing: border-box; text-align: left; font-family: monospace; font-size: 0.72rem; margin-bottom: 0.5rem; display: flex; flex-direction: column; gap: 4px;">
+                            <div style="width: 100%; border: 1px solid var(--border-color); border-radius: 6px; background: #f8fafc; padding: 12px; box-sizing: border-box; text-align: left; font-family: monospace; font-size: 1.15rem; margin-bottom: 0.8rem; display: flex; flex-direction: column; gap: 8px;">
                                 <div id="phps-code-1" onclick="highlightHfPipeline(1)" style="padding: 2px 4px; border-radius: 3px; cursor: pointer; transition: all 0.2s; color: var(--primary);">pipeline("fill-mask", ...)</div>
                                 <div id="phps-code-2" onclick="highlightHfPipeline(2)" style="padding: 2px 4px; border-radius: 3px; cursor: pointer; transition: all 0.2s; color: var(--secondary);">model="bert-base-chinese"</div>
                                 <div id="phps-code-3" onclick="highlightHfPipeline(3)" style="padding: 2px 4px; border-radius: 3px; cursor: pointer; transition: all 0.2s; color: #10b981;">unmasker("這隻 [MASK] 跑進了公園")</div>
@@ -7930,10 +7930,10 @@
                         <div style="text-align: center; color: var(--primary); padding: 0.8rem; border: 1.5px solid var(--border-color); border-radius: 12px; background: #ffffff; box-shadow: 0 4px 10px rgba(0,0,0,0.03); width: 85%; box-sizing: border-box; display: flex; flex-direction: column; align-items: center;">
                             <div style="font-weight: bold; font-size: 1.05rem; color: #0f172a; margin-bottom: 0.6rem;">隨堂問答：預訓練與微調大決策</div>
                             
-                            <div style="display:flex; flex-direction:column; gap:4px; width:100%; text-align:left;">
-                                <button id="pfq-opt-a" onclick="checkFinetuneQuiz('A')" style="padding:0.4rem; border:1px solid #cbd5e1; border-radius:6px; background:#f8fafc; font-size:0.72rem; cursor:pointer; font-weight:bold; width:100%; text-align:left;">A. 從頭隨機初始化訓練一個巨大的神經網路</button>
-                                <button id="pfq-opt-b" onclick="checkFinetuneQuiz('B')" style="padding:0.4rem; border:1px solid #cbd5e1; border-radius:6px; background:#f8fafc; font-size:0.72rem; cursor:pointer; font-weight:bold; width:100%; text-align:left;">B. 直接拿通用 BERT 預訓練模型，完全不進行微調</button>
-                                <button id="pfq-opt-c" onclick="checkFinetuneQuiz('C')" style="padding:0.4rem; border:1px solid #cbd5e1; border-radius:6px; background:#f8fafc; font-size:0.72rem; cursor:pointer; font-weight:bold; width:100%; text-align:left;">C. 使用預訓練 BERT 作底座，用少量特定資料微調</button>
+                            <div style="display:flex; flex-direction:column; gap:8px; width:100%; text-align:left;">
+                                <button id="pfq-opt-a" onclick="checkFinetuneQuiz('A')" style="padding:0.8rem; border:1px solid #cbd5e1; border-radius:6px; background:#f8fafc; font-size:1.1rem; cursor:pointer; font-weight:bold; width:100%; text-align:left;">A. 從頭隨機初始化訓練一個巨大的神經網路</button>
+                                <button id="pfq-opt-b" onclick="checkFinetuneQuiz('B')" style="padding:0.8rem; border:1px solid #cbd5e1; border-radius:6px; background:#f8fafc; font-size:1.1rem; cursor:pointer; font-weight:bold; width:100%; text-align:left;">B. 直接拿通用 BERT 預訓練模型，完全不進行微調</button>
+                                <button id="pfq-opt-c" onclick="checkFinetuneQuiz('C')" style="padding:0.8rem; border:1px solid #cbd5e1; border-radius:6px; background:#f8fafc; font-size:1.1rem; cursor:pointer; font-weight:bold; width:100%; text-align:left;">C. 使用預訓練 BERT 作底座，用少量特定資料微調</button>
                             </div>
                             
                             <div id="pfq-desc" style="font-size: 0.72rem; color: var(--text-muted); font-weight: bold; margin-top: 0.5rem; min-height: 28px; text-align: center; line-height: 1.35; width:100%;">
@@ -11265,16 +11265,16 @@
                             <div style="font-size: 0.82rem; font-weight: bold; color: var(--primary); margin-bottom: 0.5rem; text-align: center;">克漏字對決：點擊單字，看 BERT 的語意預測結果！</div>
                             
                             <div style="width: 100%; background: #ffffff; border: 1.5px solid var(--border-color); border-radius: 10px; padding: 0.8rem; box-sizing: border-box; text-align: center; margin-bottom: 0.6rem; box-shadow: 0 2px 4px rgba(0,0,0,0.02);">
-                                <div style="font-size: 1.1rem; font-weight: bold; color: #334155; margin-bottom: 0.2rem;" id="bert-mask-sentence">
-                                    這隻 <span style="color: var(--secondary); background: #f1f5f9; padding: 0.1rem 0.4rem; border-radius: 4px; font-family: monospace;">[MASK]</span> 跑進了公園
+                                <div style="font-size: 1.6rem; font-weight: bold; color: #334155; margin-bottom: 0.4rem;" id="bert-mask-sentence">
+                                    這隻 <span style="color: var(--secondary); background: #f1f5f9; padding: 0.2rem 0.6rem; border-radius: 4px; font-family: monospace;">[MASK]</span> 跑進了公園
                                 </div>
                             </div>
                             
                             <!-- Candidates -->
                             <div style="display: flex; gap: 0.4rem; justify-content: center; width: 100%;">
-                                <button class="btn btn-sm" onclick="selectBertWord('貓咪', 78.5)" style="padding: 0.25rem 0.6rem; font-size: 0.75rem; border-radius: 4px; border: 1px solid var(--success); background: rgba(16,185,129,0.04); color: var(--success); cursor: pointer; font-weight: bold;">貓咪 (78.5%)</button>
-                                <button class="btn btn-sm" onclick="selectBertWord('狗狗', 16.2)" style="padding: 0.25rem 0.6rem; font-size: 0.75rem; border-radius: 4px; border: 1px solid var(--primary); background: rgba(16,69,145,0.04); color: var(--primary); cursor: pointer; font-weight: bold;">狗狗 (16.2%)</button>
-                                <button class="btn btn-sm" onclick="selectBertWord('松鼠', 4.1)" style="padding: 0.25rem 0.6rem; font-size: 0.75rem; border-radius: 4px; border: 1px solid var(--secondary); background: rgba(64,119,199,0.04); color: var(--secondary); cursor: pointer; font-weight: bold;">松鼠 (4.1%)</button>
+                                <button class="btn btn-sm" onclick="selectBertWord('貓咪', 78.5)" style="padding: 0.5rem 1rem; font-size: 1.1rem; border-radius: 4px; border: 1px solid var(--success); background: rgba(16,185,129,0.04); color: var(--success); cursor: pointer; font-weight: bold;">貓咪 (78.5%)</button>
+                                <button class="btn btn-sm" onclick="selectBertWord('狗狗', 16.2)" style="padding: 0.5rem 1rem; font-size: 1.1rem; border-radius: 4px; border: 1px solid var(--primary); background: rgba(16,69,145,0.04); color: var(--primary); cursor: pointer; font-weight: bold;">狗狗 (16.2%)</button>
+                                <button class="btn btn-sm" onclick="selectBertWord('松鼠', 4.1)" style="padding: 0.5rem 1rem; font-size: 1.1rem; border-radius: 4px; border: 1px solid var(--secondary); background: rgba(64,119,199,0.04); color: var(--secondary); cursor: pointer; font-weight: bold;">松鼠 (4.1%)</button>
                             </div>
                             
                             <div id="bert-mask-desc" style="font-size: 0.72rem; color: var(--text-muted); font-weight: bold; margin-top: 0.5rem; text-align: center; min-height: 28px; line-height: 1.4;">
@@ -11556,7 +11556,7 @@
                         <div style="text-align: center; color: var(--primary); padding: 0.8rem; border: 1.5px solid var(--border-color); border-radius: 12px; background: #ffffff; box-shadow: 0 4px 10px rgba(0,0,0,0.03); width: 85%; box-sizing: border-box; display: flex; flex-direction: column; align-items: center;">
                             <div style="font-weight: bold; font-size: 1.02rem; color: #0f172a; margin-bottom: 0.4rem;">Hugging Face Pipeline API 解析</div>
                             <div style="font-size: 0.72rem; color: var(--text-muted); font-weight: bold; margin-bottom: 0.5rem;">點擊程式碼段，觀察物件功能！</div>
-                            <div style="width: 100%; border: 1px solid var(--border-color); border-radius: 6px; background: #f8fafc; padding: 6px; box-sizing: border-box; text-align: left; font-family: monospace; font-size: 0.72rem; margin-bottom: 0.5rem; display: flex; flex-direction: column; gap: 4px;">
+                            <div style="width: 100%; border: 1px solid var(--border-color); border-radius: 6px; background: #f8fafc; padding: 12px; box-sizing: border-box; text-align: left; font-family: monospace; font-size: 1.15rem; margin-bottom: 0.8rem; display: flex; flex-direction: column; gap: 8px;">
                                 <div id="hfpi-code-1" onclick="highlightHfPipelineApi(1)" style="padding: 2px 4px; border-radius: 3px; cursor: pointer; transition: all 0.2s; color: var(--primary);">classifier = pipeline("sentiment-analysis")</div>
                                 <div id="hfpi-code-2" onclick="highlightHfPipelineApi(2)" style="padding: 2px 4px; border-radius: 3px; cursor: pointer; transition: all 0.2s; color: var(--secondary);">res = classifier("這部電影真是太好看了！")</div>
                             </div>
