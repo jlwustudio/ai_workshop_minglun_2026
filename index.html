@@ -7248,27 +7248,27 @@
                             <div style="font-weight: bold; font-size: 1.05rem; color: #0f172a; margin-bottom: 0.4rem;">空間結構破壞：MLP 拉平災難</div>
                             
                             <!-- 2D Grid Representation -->
-                            <div id="sd-grid-box" style="display: grid; grid-template-columns: repeat(4, 18px); grid-template-rows: repeat(4, 18px); gap: 2px; border: 1px solid #cbd5e1; padding: 4px; background: #f8fafc; transition: all 0.5s ease;">
+                            <div id="sd-grid-box" style="display: grid; grid-template-columns: repeat(4, 30px); grid-template-rows: repeat(4, 30px); gap: 4px; border: 1px solid #cbd5e1; padding: 6px; background: #f8fafc; transition: all 0.5s ease;">
                                 <!-- Populate with 16 cells -->
-                                <div class="sd-cell" style="background:#3b82f6; width:18px; height:18px; border-radius:2px;"></div>
-                                <div class="sd-cell" style="background:#3b82f6; width:18px; height:18px; border-radius:2px;"></div>
-                                <div class="sd-cell" style="background:#e2e8f0; width:18px; height:18px; border-radius:2px;"></div>
-                                <div class="sd-cell" style="background:#e2e8f0; width:18px; height:18px; border-radius:2px;"></div>
+                                <div class="sd-cell" style="background:#3b82f6; width:30px; height:30px; border-radius:4px;"></div>
+                                <div class="sd-cell" style="background:#3b82f6; width:30px; height:30px; border-radius:4px;"></div>
+                                <div class="sd-cell" style="background:#e2e8f0; width:30px; height:30px; border-radius:4px;"></div>
+                                <div class="sd-cell" style="background:#e2e8f0; width:30px; height:30px; border-radius:4px;"></div>
                                 
-                                <div class="sd-cell" style="background:#e2e8f0; width:18px; height:18px; border-radius:2px;"></div>
-                                <div class="sd-cell" style="background:#3b82f6; width:18px; height:18px; border-radius:2px;"></div>
-                                <div class="sd-cell" style="background:#e2e8f0; width:18px; height:18px; border-radius:2px;"></div>
-                                <div class="sd-cell" style="background:#e2e8f0; width:18px; height:18px; border-radius:2px;"></div>
+                                <div class="sd-cell" style="background:#e2e8f0; width:30px; height:30px; border-radius:4px;"></div>
+                                <div class="sd-cell" style="background:#3b82f6; width:30px; height:30px; border-radius:4px;"></div>
+                                <div class="sd-cell" style="background:#e2e8f0; width:30px; height:30px; border-radius:4px;"></div>
+                                <div class="sd-cell" style="background:#e2e8f0; width:30px; height:30px; border-radius:4px;"></div>
                                 
-                                <div class="sd-cell" style="background:#e2e8f0; width:18px; height:18px; border-radius:2px;"></div>
-                                <div class="sd-cell" style="background:#3b82f6; width:18px; height:18px; border-radius:2px;"></div>
-                                <div class="sd-cell" style="background:#e2e8f0; width:18px; height:18px; border-radius:2px;"></div>
-                                <div class="sd-cell" style="background:#e2e8f0; width:18px; height:18px; border-radius:2px;"></div>
+                                <div class="sd-cell" style="background:#e2e8f0; width:30px; height:30px; border-radius:4px;"></div>
+                                <div class="sd-cell" style="background:#3b82f6; width:30px; height:30px; border-radius:4px;"></div>
+                                <div class="sd-cell" style="background:#e2e8f0; width:30px; height:30px; border-radius:4px;"></div>
+                                <div class="sd-cell" style="background:#e2e8f0; width:30px; height:30px; border-radius:4px;"></div>
                                 
-                                <div class="sd-cell" style="background:#e2e8f0; width:18px; height:18px; border-radius:2px;"></div>
-                                <div class="sd-cell" style="background:#3b82f6; width:18px; height:18px; border-radius:2px;"></div>
-                                <div class="sd-cell" style="background:#e2e8f0; width:18px; height:18px; border-radius:2px;"></div>
-                                <div class="sd-cell" style="background:#e2e8f0; width:18px; height:18px; border-radius:2px;"></div>
+                                <div class="sd-cell" style="background:#e2e8f0; width:30px; height:30px; border-radius:4px;"></div>
+                                <div class="sd-cell" style="background:#3b82f6; width:30px; height:30px; border-radius:4px;"></div>
+                                <div class="sd-cell" style="background:#e2e8f0; width:30px; height:30px; border-radius:4px;"></div>
+                                <div class="sd-cell" style="background:#e2e8f0; width:30px; height:30px; border-radius:4px;"></div>
                             </div>
                             
                             <button class="btn btn-sm" id="sd-run-btn" onclick="runFlattenDisaster()" style="margin-top: 0.6rem; padding: 0.25rem 0.8rem; font-size: 0.75rem; font-weight: bold; cursor: pointer; border-radius: 4px; border: none; background: var(--secondary); color: white;">
@@ -7331,7 +7331,7 @@
                                 <!-- 3x3 Kernel values -->
                                 <div style="text-align: center;">
                                     <div style="font-size:0.68rem; font-weight:bold; color:var(--text-muted); margin-bottom:2px;">濾鏡數值 (3&times;3)</div>
-                                    <div id="kv-matrix" style="display: grid; grid-template-columns: repeat(3, 22px); grid-template-rows: repeat(3, 22px); gap: 2px; border: 1px solid var(--primary); padding: 2px; background: #eef2ff;">
+                                    <div id="kv-matrix" style="display: grid; grid-template-columns: repeat(3, 44px); grid-template-rows: repeat(3, 44px); gap: 4px; border: 1.5px solid var(--primary); padding: 4px; background: #eef2ff;">
                                         <!-- JS will populate -->
                                     </div>
                                 </div>
@@ -7358,7 +7358,7 @@
                                 <!-- Input (5x5) -->
                                 <div style="text-align: center;">
                                     <div style="font-size: 0.68rem; font-weight: bold; color: var(--text-muted); margin-bottom: 2px;">輸入影像 (5&times;5)</div>
-                                    <div id="cs-input-grid" style="display: grid; grid-template-columns: repeat(5, 15px); grid-template-rows: repeat(5, 15px); gap: 1px; border: 1px solid #cbd5e1; padding: 2px; background: #f1f5f9; position: relative;">
+                                    <div id="cs-input-grid" style="display: grid; grid-template-columns: repeat(5, 30px); grid-template-rows: repeat(5, 30px); gap: 2px; border: 1.5px solid #cbd5e1; padding: 4px; background: #f1f5f9; position: relative;">
                                         <!-- JS will populate -->
                                     </div>
                                 </div>
@@ -7368,7 +7368,7 @@
                                 <!-- Output (3x3) -->
                                 <div style="text-align: center;">
                                     <div style="font-size: 0.68rem; font-weight: bold; color: var(--text-muted); margin-bottom: 2px;">特徵圖 (3&times;3)</div>
-                                    <div id="cs-output-grid" style="display: grid; grid-template-columns: repeat(3, 20px); grid-template-rows: repeat(3, 20px); gap: 1.5px; border: 1.5px solid #10b981; padding: 2.5px; background: #f0fdf4;">
+                                    <div id="cs-output-grid" style="display: grid; grid-template-columns: repeat(3, 40px); grid-template-rows: repeat(3, 40px); gap: 3px; border: 2px solid #10b981; padding: 4px; background: #f0fdf4;">
                                         <!-- JS will populate -->
                                     </div>
                                 </div>
@@ -7422,7 +7422,7 @@
                                 <!-- Input (4x4) -->
                                 <div style="text-align: center;">
                                     <div style="font-size: 0.68rem; font-weight: bold; color: var(--text-muted); margin-bottom: 2px;">特徵圖 (4&times;4)</div>
-                                    <div id="mp-input-grid" style="display: grid; grid-template-columns: repeat(4, 18px); grid-template-rows: repeat(4, 18px); gap: 1.5px; border: 1px solid #cbd5e1; padding: 2px; background: #f8fafc;">
+                                    <div id="mp-input-grid" style="display: grid; grid-template-columns: repeat(4, 36px); grid-template-rows: repeat(4, 36px); gap: 3px; border: 1.5px solid #cbd5e1; padding: 4px; background: #f8fafc;">
                                         <!-- JS will populate -->
                                     </div>
                                 </div>
@@ -7432,7 +7432,7 @@
                                 <!-- Output (2x2) -->
                                 <div style="text-align: center;">
                                     <div style="font-size: 0.68rem; font-weight: bold; color: var(--text-muted); margin-bottom: 2px;">最大池化輸出 (2&times;2)</div>
-                                    <div id="mp-output-grid" style="display: grid; grid-template-columns: repeat(2, 24px); grid-template-rows: repeat(2, 24px); gap: 2px; border: 1.5px solid #ef4444; padding: 3px; background: #fef2f2;">
+                                    <div id="mp-output-grid" style="display: grid; grid-template-columns: repeat(2, 48px); grid-template-rows: repeat(2, 48px); gap: 4px; border: 2px solid #ef4444; padding: 6px; background: #fef2f2;">
                                         <!-- JS will populate -->
                                     </div>
                                 </div>
@@ -7457,7 +7457,7 @@
                                 <!-- Input (4x4) -->
                                 <div style="text-align: center;">
                                     <div style="font-size: 0.68rem; font-weight: bold; color: var(--text-muted); margin-bottom: 2px;">特徵圖 (4&times;4)</div>
-                                    <div id="ap-input-grid" style="display: grid; grid-template-columns: repeat(4, 18px); grid-template-rows: repeat(4, 18px); gap: 1.5px; border: 1px solid #cbd5e1; padding: 2px; background: #f8fafc;">
+                                    <div id="ap-input-grid" style="display: grid; grid-template-columns: repeat(4, 36px); grid-template-rows: repeat(4, 36px); gap: 3px; border: 1.5px solid #cbd5e1; padding: 4px; background: #f8fafc;">
                                         <!-- JS will populate -->
                                     </div>
                                 </div>
@@ -7467,7 +7467,7 @@
                                 <!-- Output (2x2) -->
                                 <div style="text-align: center;">
                                     <div style="font-size: 0.68rem; font-weight: bold; color: var(--text-muted); margin-bottom: 2px;">平均池化輸出 (2&times;2)</div>
-                                    <div id="ap-output-grid" style="display: grid; grid-template-columns: repeat(2, 24px); grid-template-rows: repeat(2, 24px); gap: 2px; border: 1.5px solid #fb923c; padding: 3px; background: #fff7ed;">
+                                    <div id="ap-output-grid" style="display: grid; grid-template-columns: repeat(2, 48px); grid-template-rows: repeat(2, 48px); gap: 4px; border: 2px solid #fb923c; padding: 6px; background: #fff7ed;">
                                         <!-- JS will populate -->
                                     </div>
                                 </div>
@@ -7492,7 +7492,7 @@
                                 <!-- Input (6x6) -->
                                 <div style="text-align: center;">
                                     <div style="font-size: 0.68rem; font-weight: bold; color: var(--text-muted); margin-bottom: 2px;">輸入影像 (平移測試)</div>
-                                    <div id="ti-input-grid" style="display: grid; grid-template-columns: repeat(6, 12px); grid-template-rows: repeat(6, 12px); gap: 1px; border: 1px solid #cbd5e1; padding: 2px; background: #f1f5f9;">
+                                    <div id="ti-input-grid" style="display: grid; grid-template-columns: repeat(6, 24px); grid-template-rows: repeat(6, 24px); gap: 2px; border: 1.5px solid #cbd5e1; padding: 4px; background: #f1f5f9;">
                                         <!-- JS will populate -->
                                     </div>
                                 </div>
@@ -7502,7 +7502,7 @@
                                 <!-- MaxPool Output (3x3) -->
                                 <div style="text-align: center;">
                                     <div style="font-size: 0.68rem; font-weight: bold; color: var(--text-muted); margin-bottom: 2px;">池化輸出 (特徵強度)</div>
-                                    <div id="ti-output-grid" style="display: grid; grid-template-columns: repeat(3, 16px); grid-template-rows: repeat(3, 16px); gap: 1.5px; border: 1.5px solid #10b981; padding: 2px; background: #f0fdf4;">
+                                    <div id="ti-output-grid" style="display: grid; grid-template-columns: repeat(3, 48px); grid-template-rows: repeat(3, 48px); gap: 4px; border: 2px solid #10b981; padding: 4px; background: #f0fdf4;">
                                         <!-- JS will populate -->
                                     </div>
                                 </div>
@@ -7557,7 +7557,7 @@
                             </div>
                             
                             <!-- Cat Matrix Box -->
-                            <div style="position:relative; width: 110px; height: 75px; background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 6px; overflow: hidden; display: flex; justify-content: center; align-items: center; box-sizing: border-box;">
+                            <div style="position:relative; width: 220px; height: 150px; background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 12px; overflow: hidden; display: flex; justify-content: center; align-items: center; box-sizing: border-box;">
                                 <svg width="100" height="70" viewBox="0 0 100 70" id="cf-cat-svg" style="overflow:visible; transition: filter 0.3s ease;">
                                     <!-- Drawing a stylized cat head -->
                                     <ellipse cx="50" cy="35" rx="20" ry="15" fill="#64748b" />
@@ -7631,7 +7631,7 @@
                                 <!-- Input (4x4) -->
                                 <div style="text-align: center;">
                                     <div style="font-size: 0.68rem; font-weight: bold; color: var(--text-muted); margin-bottom: 2px;">輸入 (4&times;4)</div>
-                                    <div style="display: grid; grid-template-columns: repeat(4, 14px); grid-template-rows: repeat(4, 14px); gap: 1px; border: 1px solid #cbd5e1; padding: 1.5px; background: #f8fafc; font-size:7px; font-family:monospace; color:#475569;">
+                                    <div style="display: grid; grid-template-columns: repeat(4, 28px); grid-template-rows: repeat(4, 28px); gap: 2px; border: 1.5px solid #cbd5e1; padding: 3px; background: #f8fafc; font-size:14px; font-family:monospace; color:#475569;">
                                         <!-- Red Quad -->
                                         <div style="background:rgba(239,68,68,0.05); font-weight:bold;">1</div>
                                         <div style="background:rgba(239,68,68,0.05); font-weight:bold;">3</div>
@@ -7663,11 +7663,11 @@
                                 <!-- Output Quiz (2x2 Inputs) -->
                                 <div style="text-align: center;">
                                     <div style="font-size: 0.68rem; font-weight: bold; color: var(--text-muted); margin-bottom: 2px;">寫下池化結果</div>
-                                    <div style="display: grid; grid-template-columns: repeat(2, 26px); grid-template-rows: repeat(2, 26px); gap: 2px; border: 1.5px solid var(--primary); padding: 2px; background: #eef2ff;">
-                                        <input type="text" id="mp-q1" placeholder="?" style="width:22px; height:22px; text-align:center; font-weight:bold; font-size:10px; border:1px solid #cbd5e1; border-radius:3px; outline:none; color:#ef4444; background:rgba(239,68,68,0.05);">
-                                        <input type="text" id="mp-q2" placeholder="?" style="width:22px; height:22px; text-align:center; font-weight:bold; font-size:10px; border:1px solid #cbd5e1; border-radius:3px; outline:none; color:#104591; background:rgba(16,69,145,0.05);">
-                                        <input type="text" id="mp-q3" placeholder="?" style="width:22px; height:22px; text-align:center; font-weight:bold; font-size:10px; border:1px solid #cbd5e1; border-radius:3px; outline:none; color:#10b981; background:rgba(16,185,129,0.05);">
-                                        <input type="text" id="mp-q4" placeholder="?" style="width:22px; height:22px; text-align:center; font-weight:bold; font-size:10px; border:1px solid #cbd5e1; border-radius:3px; outline:none; color:#4077c7; background:rgba(64,119,199,0.05);">
+                                    <div style="display: grid; grid-template-columns: repeat(2, 52px); grid-template-rows: repeat(2, 52px); gap: 4px; border: 2px solid var(--primary); padding: 4px; background: #eef2ff;">
+                                        <input type="text" id="mp-q1" placeholder="?" style="width:44px; height:44px; text-align:center; font-weight:bold; font-size:20px; border:1.5px solid #cbd5e1; border-radius:6px; outline:none; color:#ef4444; background:rgba(239,68,68,0.05);">
+                                        <input type="text" id="mp-q2" placeholder="?" style="width:44px; height:44px; text-align:center; font-weight:bold; font-size:20px; border:1.5px solid #cbd5e1; border-radius:6px; outline:none; color:#104591; background:rgba(16,69,145,0.05);">
+                                        <input type="text" id="mp-q3" placeholder="?" style="width:44px; height:44px; text-align:center; font-weight:bold; font-size:20px; border:1.5px solid #cbd5e1; border-radius:6px; outline:none; color:#10b981; background:rgba(16,185,129,0.05);">
+                                        <input type="text" id="mp-q4" placeholder="?" style="width:44px; height:44px; text-align:center; font-weight:bold; font-size:20px; border:1.5px solid #cbd5e1; border-radius:6px; outline:none; color:#4077c7; background:rgba(64,119,199,0.05);">
                                     </div>
                                 </div>
                             </div>
@@ -14075,14 +14075,14 @@
             const cells = grid.querySelectorAll(".sd-cell");
             
             // Set grid columns to 16
-            grid.style.gridTemplateColumns = "repeat(16, 11px)";
-            grid.style.gridTemplateRows = "11px";
-            grid.style.gap = "1px";
-            grid.style.padding = "2px";
+            grid.style.gridTemplateColumns = "repeat(16, 20px)";
+            grid.style.gridTemplateRows = "20px";
+            grid.style.gap = "2px";
+            grid.style.padding = "4px";
             
             cells.forEach(cell => {
-                cell.style.width = "11px";
-                cell.style.height = "11px";
+                cell.style.width = "20px";
+                cell.style.height = "20px";
             });
             
             desc.innerHTML = `<span style="color:#ef4444; font-weight:bold;">空間結構破壞！</span>原先在垂直相鄰的像素（藍色），現在在 1D 數組中相隔遙遠。AI 無法識別特徵在幾何上的上下相對位置！`;
@@ -14101,15 +14101,15 @@
             const desc = document.getElementById("sd-desc");
             if (!grid || !btn || !desc) return;
             
-            grid.style.gridTemplateColumns = "repeat(4, 18px)";
-            grid.style.gridTemplateRows = "repeat(4, 18px)";
-            grid.style.gap = "2px";
-            grid.style.padding = "4px";
+            grid.style.gridTemplateColumns = "repeat(4, 30px)";
+            grid.style.gridTemplateRows = "repeat(4, 30px)";
+            grid.style.gap = "4px";
+            grid.style.padding = "6px";
             
             const cells = grid.querySelectorAll(".sd-cell");
             cells.forEach(cell => {
-                cell.style.width = "18px";
-                cell.style.height = "18px";
+                cell.style.width = "30px";
+                cell.style.height = "30px";
             });
             
             desc.innerText = "點擊按鈕，觀察 2D 網格被強行拉成一維向量時，鄰近像素的空間位置如何失聯。";
@@ -14185,7 +14185,7 @@
                 else if (v === -1) { color = "#fee2e2"; fontColor = "#991b1b"; }
                 
                 matrix.innerHTML += `
-                    <div style="background:${color}; color:${fontColor}; font-weight:bold; font-size:9px; border-radius:2px; display:flex; align-items:center; justify-content:center;">
+                    <div style="background:${color}; color:${fontColor}; font-weight:bold; font-size:16px; border-radius:4px; display:flex; align-items:center; justify-content:center;">
                         ${v}
                     </div>
                 `;
@@ -14219,13 +14219,13 @@
             ];
             for (let i = 0; i < 25; i++) {
                 const bg = inputVals[i] === 1 ? "#94a3b8" : "#ffffff";
-                inputGrid.innerHTML += `<div class="cs-in-cell" style="width:15px; height:15px; background:${bg}; border-radius:1px; box-sizing:border-box; transition: outline 0.1s;"></div>`;
+                inputGrid.innerHTML += `<div class="cs-in-cell" style="width:30px; height:30px; background:${bg}; border-radius:2px; box-sizing:border-box; transition: outline 0.1s;"></div>`;
             }
             
             // Build output 3x3 (initially empty/white)
             outputGrid.innerHTML = "";
             for (let i = 0; i < 9; i++) {
-                outputGrid.innerHTML += `<div class="cs-out-cell" style="width:20px; height:20px; background:#ffffff; border:1px solid #cbd5e1; border-radius:2px; box-sizing:border-box; display:flex; align-items:center; justify-content:center; font-size:8px; font-weight:bold; color:#10b981; transition: background 0.2s;"></div>`;
+                outputGrid.innerHTML += `<div class="cs-out-cell" style="width:40px; height:40px; background:#ffffff; border:1.5px solid #cbd5e1; border-radius:4px; box-sizing:border-box; display:flex; align-items:center; justify-content:center; font-size:16px; font-weight:bold; color:#10b981; transition: background 0.2s;"></div>`;
             }
         }
         
@@ -14354,7 +14354,7 @@
                 else { bg = "rgba(64, 119, 199, 0.05)"; color = "#4077c7"; }
                 
                 inputGrid.innerHTML += `
-                    <div class="mp-in-cell" style="width:18px; height:18px; background:${bg}; color:${color}; font-weight:bold; font-size:9px; border-radius:2px; display:flex; align-items:center; justify-content:center; transition: transform 0.15s;">
+                    <div class="mp-in-cell" style="width:36px; height:36px; background:${bg}; color:${color}; font-weight:bold; font-size:18px; border-radius:4px; display:flex; align-items:center; justify-content:center; transition: transform 0.15s;">
                         ${vals[i]}
                     </div>
                 `;
@@ -14363,7 +14363,7 @@
             // Build output 2x2
             outputGrid.innerHTML = "";
             for (let i = 0; i < 4; i++) {
-                outputGrid.innerHTML += `<div class="mp-out-cell" style="width:24px; height:24px; background:#ffffff; border:1px solid #cbd5e1; border-radius:3px; display:flex; align-items:center; justify-content:center; font-size:10px; font-weight:bold; transition: background 0.3s, transform 0.3s;"></div>`;
+                outputGrid.innerHTML += `<div class="mp-out-cell" style="width:48px; height:48px; background:#ffffff; border:1.5px solid #cbd5e1; border-radius:6px; display:flex; align-items:center; justify-content:center; font-size:20px; font-weight:bold; transition: background 0.3s, transform 0.3s;"></div>`;
             }
         }
         
@@ -14462,7 +14462,7 @@
                 else { bg = "rgba(64, 119, 199, 0.05)"; color = "#4077c7"; }
                 
                 inputGrid.innerHTML += `
-                    <div class="ap-in-cell" style="width:18px; height:18px; background:${bg}; color:${color}; font-weight:bold; font-size:9px; border-radius:2px; display:flex; align-items:center; justify-content:center; transition: transform 0.15s;">
+                    <div class="ap-in-cell" style="width:36px; height:36px; background:${bg}; color:${color}; font-weight:bold; font-size:18px; border-radius:4px; display:flex; align-items:center; justify-content:center; transition: transform 0.15s;">
                         ${vals[i]}
                     </div>
                 `;
@@ -14471,7 +14471,7 @@
             // Build output 2x2
             outputGrid.innerHTML = "";
             for (let i = 0; i < 4; i++) {
-                outputGrid.innerHTML += `<div class="ap-out-cell" style="width:24px; height:24px; background:#ffffff; border:1px solid #cbd5e1; border-radius:3px; display:flex; align-items:center; justify-content:center; font-size:9px; font-weight:bold; transition: background 0.3s, transform 0.3s;"></div>`;
+                outputGrid.innerHTML += `<div class="ap-out-cell" style="width:48px; height:48px; background:#ffffff; border:1.5px solid #cbd5e1; border-radius:6px; display:flex; align-items:center; justify-content:center; font-size:18px; font-weight:bold; transition: background 0.3s, transform 0.3s;"></div>`;
             }
         }
         
@@ -14564,7 +14564,7 @@
             inputGrid.innerHTML = "";
             for (let i = 0; i < 36; i++) {
                 const bg = inputVals[i] === 9 ? "var(--primary)" : "#ffffff";
-                inputGrid.innerHTML += `<div style="width:12px; height:12px; background:${bg}; border-radius:1px; box-sizing:border-box;"></div>`;
+                inputGrid.innerHTML += `<div style="width:24px; height:24px; background:${bg}; border-radius:2px; box-sizing:border-box;"></div>`;
             }
             
             // Max pooling with stride 2 outputs a 3x3 grid
@@ -14583,7 +14583,7 @@
                     const bg = maxVal === 9 ? "rgba(16, 185, 129, 0.3)" : "#ffffff";
                     const fontColor = maxVal === 9 ? "#10b981" : "#cbd5e1";
                     outputGrid.innerHTML += `
-                        <div style="width:32px; height:32px; background:${bg}; color:${fontColor}; border:1px solid #cbd5e1; font-weight:bold; font-size:8px; display:flex; align-items:center; justify-content:center;">
+                        <div style="width:48px; height:48px; background:${bg}; color:${fontColor}; border:1.5px solid #cbd5e1; border-radius:4px; font-weight:bold; font-size:16px; display:flex; align-items:center; justify-content:center;">
                             ${maxVal}
                         </div>
                     `;
