@@ -1,0 +1,23 @@
+# === 東吳大學資料科學系 2026 暑期 AI 營隊本地環境依賴 ===
+# 本地電腦教室若使用 NVIDIA GeForce RTX 4070 顯卡，請安裝以下依賴環境：
+
+# 深度學習與電腦視覺核心
+torch>=2.0.0
+torchvision>=0.15.0
+transformers>=4.30.0
+
+# 資料處理與科學計算
+numpy>=1.24.0
+pandas>=2.0.0
+scikit-learn>=1.2.0
+
+# 網頁請求與影像讀取
+requests>=2.31.0
+pillow>=9.5.0
+
+# 資料視覺化
+matplotlib>=3.7.0
+
+# 互動式實驗環境
+jupyter>=1.0.0
+ipywidgets>=8.0.0
